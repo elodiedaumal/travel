@@ -1,13 +1,81 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondColor: hsl(187, 85%, 43%);
+  --GradientColor: linear-gradient(to right, hsl(187, 85%, 43%));
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(201, 33%, 16%);
+  --TextColor: hsl(240, 4%, 36%);
+  --WhiteColorDeam: hsl(0, 0%, 93%);
+  --GreyText: rgb(190, 190, 190);
+  --InputColor: rgb(239, 239, 239);
+  --BodyColor: rgb(240, 240, 246);
+  --CardBG: rgb(225, 225, 235);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--GradientColor);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn a {
+  color: var(--WhiteColor);
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: var(--SecondColor);
+}
+
+img,
+video {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: var(--BodyColor);
 }
