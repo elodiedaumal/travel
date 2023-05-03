@@ -45,6 +45,19 @@ li {
   font-size: 2rem;
   cursor: pointer;
 }
+.iconLogo {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+  transform: translateY(5px);
+}
+
+.menuIcon {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+}
+.menuIcon:hover {
+  color: var(--SecondColor);
+}
 
 .flex {
   display: flex;
@@ -71,7 +84,7 @@ li {
 }
 
 .btn:hover {
-  background-color: var(--SecondColor);
+  background: var(--SecondColor);
 }
 
 img,
@@ -82,4 +95,10 @@ video {
 
 body {
   background: var(--BodyColor);
+}
+
+@media screen and (max-width: 768px) {
+  .show {
+    top: 7rem;
+  }
 }
