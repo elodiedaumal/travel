@@ -85,7 +85,7 @@ const Header = styled.header`
   background: var(--WhiteColorDeam);
   width: 100%;
   padding: 1rem;
-  z-index: 1;
+  z-index: 100;
   box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
 `;
 const Logo = styled.a`
@@ -106,7 +106,7 @@ const FullNavLinks = styled.div`
     top: -100rem;
     left: 50%;
     transform: translate(-50%);
-    z-index: 999;
+    z-index: 2099;
     box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
     transition: all 1s ease-in-out;
     ${(props) =>

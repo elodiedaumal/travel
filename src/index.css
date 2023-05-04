@@ -76,6 +76,7 @@ li {
   border: none;
   outline: none;
   cursor: pointer;
+  color: var(--WhiteColor);
 }
 
 .btn a {
@@ -97,8 +98,6 @@ body {
   background: var(--BodyColor);
 }
 
-@media screen and (max-width: 768px) {
-  .show {
-    top: 7rem;
-  }
+input {
+  font-size: 100%;
 }
