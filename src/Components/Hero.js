@@ -2,6 +2,9 @@ import styled, { css } from 'styled-components';
 import VideoHero from '../assets/video1.mp4';
 import { ImLocation } from 'react-icons/im';
 import { HiFilter } from 'react-icons/hi';
+import { TbApps } from 'react-icons/tb';
+import { TfiMenuAlt } from 'react-icons/tfi';
+import { FaFacebook, FaInstagram, FaTripadvisor } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -43,6 +46,15 @@ const Hero = () => {
             <p>MORE FILTERS</p>
           </Button>
         </Card>
+        <SocialLinks className='flex'>
+          <div>
+            <FaFacebook className='icon' /> <FaInstagram className='icon' />{' '}
+            <FaTripadvisor className='icon' />
+          </div>
+          <div>
+            <TfiMenuAlt className='icon' /> <TbApps className='icon' />
+          </div>
+        </SocialLinks>
       </Content>
     </Section>
   );
@@ -85,7 +97,6 @@ const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
   margin: auto;
   color: var(--WhiteColor);
   z-index: 50;
@@ -106,18 +117,36 @@ const Text = styled.div`
 const Card = styled.div`
   z-index: 50;
   position: relative;
-  padding: 2rem 1rem 0 1rem;
+  padding: 2rem 1rem 3rem 2rem;
   background: var(--WhiteColor);
   border-radius: 10px;
   gap: 1rem;
   color: var(--TextColor);
   width: 80%;
   margin: auto;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
   label {
     display: block;
     color: var(--TextColor);
     padding-bottom: 10px;
     font-weight: 500;
+  }
+`;
+
+const SocialLinks = styled.div`
+  width: 80%;
+  margin: 30px auto;
+  justify-content: space-between;
+  font-weight: bold;
+  .icon {
+    font-size: 20px;
+    margin: 5px;
+
+    &:hover {
+      color: var(--PrimaryColor);
+    }
   }
 `;
 
@@ -158,12 +187,12 @@ const TotalLabel = styled.div`
 `;
 
 const Button = styled.button`
+  position: absolute;
   justify-self: center;
-  width: 70%;
+  /* width: 70%; */
   font-size: 13px;
   gap: 10px;
-  margin-top: 20px;
-  margin-bottom: -15px;
+  bottom: -18px;
   .icon {
     font-size: 13px;
   }
