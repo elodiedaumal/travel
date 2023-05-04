@@ -103,7 +103,7 @@ const FullNavLinks = styled.div`
     height: max-content;
     width: 80%;
     border-radius: 1rem;
-    top: -500rem;
+    top: -100rem;
     left: 50%;
     transform: translate(-50%);
     z-index: 999;
