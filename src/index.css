@@ -23,6 +23,7 @@
   --InputColor: rgb(239, 239, 239);
   --BodyColor: rgb(240, 240, 246);
   --CardBG: rgb(225, 225, 235);
+  --CardHover: rgb(255, 255, 255);
 }
 
 a {

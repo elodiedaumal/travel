@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import VideoHero from '../assets/video1.mp4';
 import { ImLocation } from 'react-icons/im';
 import { HiFilter } from 'react-icons/hi';
@@ -189,7 +189,7 @@ const TotalLabel = styled.div`
 const Button = styled.button`
   position: absolute;
   justify-self: center;
-  /* width: 70%; */
+
   font-size: 13px;
   gap: 10px;
   bottom: -18px;
