@@ -66,12 +66,12 @@ const Navbar = () => {
           </FullNavLinks>
         )}
 
-        <div>
+        <MobileMenu>
           <AiOutlineMenuFold
             className='icon menuIcon'
             onClick={handleSidebar}
           />
-        </div>
+        </MobileMenu>
       </Header>
     </nav>
   );
@@ -87,6 +87,9 @@ const Header = styled.header`
   padding: 1rem;
   z-index: 100;
   box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+  @media (min-width: 768px) {
+    padding: 1.5rem 2rem;
+  }
 `;
 const Logo = styled.a`
   color: var(--BlackColor);
@@ -117,6 +120,12 @@ const FullNavLinks = styled.div`
   }
 `;
 
+const MobileMenu = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
 const NavLists = styled.ul`
   @media (max-width: 768px) {
     flex-direction: column;
@@ -126,10 +135,24 @@ const NavLists = styled.ul`
     gap: 0.5rem;
     margin-top: 3rem;
   }
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 const NavItem = styled.li`
   @media (max-width: 768px) {
     padding: 0.5rem 0;
+  }
+  @media (min-width: 768px) {
+    color: var(--TextColor);
+    padding: 0 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    &:hover {
+      color: var(--PrimaryColor);
+    }
   }
 `;
 const NavLinka = styled.a`
@@ -143,6 +166,7 @@ const NavLinka = styled.a`
   }
 `;
 const CloseBtn = styled.div`
+  display: none;
   @media (max-width: 768px) {
     color: var(--PrimaryColor);
     position: absolute;
@@ -154,14 +178,15 @@ const CloseBtn = styled.div`
   }
 `;
 const Button = styled.button`
-  @media (max-width: 768px) {
-    margin: 1rem 0;
-    font-weight: 600;
+  margin: 1rem 0;
+  font-weight: 600;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    margin-left: 1rem;
   }
   a {
-    @media (max-width: 768px) {
-      font-weight: 600;
-      color: var(--WhiteColor);
-    }
+    font-weight: 600;
+    color: var(--WhiteColor);
   }
 `;

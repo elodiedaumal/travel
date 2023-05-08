@@ -69,6 +69,9 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
   margin: auto;
+  @media (min-width: 900px) {
+    height: 80vh;
+  }
 `;
 
 const Overlay = styled.div`
@@ -124,8 +127,8 @@ const Card = styled.div`
   color: var(--TextColor);
   width: 80%;
   margin: auto;
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
   }
   label {
     display: block;

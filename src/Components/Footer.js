@@ -280,6 +280,9 @@ const FooterLinks = styled.div`
     color: var(--GreyText);
     margin-right: 3px;
   }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 const FooterList = styled.li`

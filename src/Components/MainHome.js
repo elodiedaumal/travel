@@ -73,6 +73,12 @@ const SectionTitle = styled.div`
 const CardContent = styled.div`
   justify-content: center;
   gap: 1.5rem;
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 const SingleCard = styled.div`
   height: 100%;
@@ -159,6 +165,12 @@ const Description = styled.p`
   font-size: 13.5px;
   font-weight: 500;
   text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 `;
 const Button = styled.button`
   margin-top: 1rem;
